@@ -1,5 +1,5 @@
 
-pub fn first(){
+pub fn first_problem(){
     let  lines: Vec<_>  = get_input().split("\n").collect();
     let mut _i:u128=1;
     let mut _sum:u128=0;
@@ -18,13 +18,12 @@ pub fn first(){
         }
         let value:u128 = line.parse().unwrap();
         _sum += value;
-            //println!("{}-{}-{}", line, sum, i);
 
     }
     println!("Problem 1 - Elf {} with sum {}", _winner, _winner_sum);
 }
 
-pub fn second() {
+pub fn second_problem() {
 
     let  lines: Vec<_>  = get_input().split("\n").collect();
     let mut _i:u128=1;
