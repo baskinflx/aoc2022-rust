@@ -1,4 +1,3 @@
-use std::ops::Index;
 
 pub fn first_problem(){
     let  lines: Vec<_>  = get_input().split("\n").collect();
@@ -71,15 +70,6 @@ fn  get_value_at(x: &Vec<&str>, index: usize) -> u32 {
     x.get(index).unwrap().parse::<u32>().unwrap()
 }
 
-fn get_example_input() -> &'static str
-{
-    return "2-4,6-8
-2-3,4-5
-5-7,7-9
-2-8,3-7
-6-6,4-6,
-2-6,4-8";
-}
 
 fn get_input() -> &'static str
 {
