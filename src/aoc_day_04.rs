@@ -4,9 +4,7 @@ pub fn first_problem(){
     let mut sum:u32=0;
 
     for line in lines  {
-        if line.trim().len() == 0 {
-            continue;
-        }
+
         let values = get_all_values(line);
         if is_inclusive(values) {
             sum +=1;
@@ -21,9 +19,7 @@ pub fn second_problem() {
     let mut sum:u32=0;
 
     for line in lines  {
-        if line.trim().len() == 0 {
-            continue;
-        }
+
         let values = get_all_values(line);
         if has_overlap(values) {
             sum +=1;

@@ -1,61 +1,59 @@
 
 pub fn first_problem(){
     let  lines: Vec<_>  = get_input().split("\n").collect();
-    let mut _i:u128=1;
-    let mut _sum:u128=0;
-    let mut _winner:u128 = 1;
-    let mut _winner_sum:u128 =0;
+    let mut i:u128=1;
+    let mut sum:u128=0;
+    let mut winner:u128 = 1;
+    let mut winner_sum:u128 =0;
     for line in lines  {
 
         if is_empty_line(line) {
-            if _sum > _winner_sum {
-                _winner_sum = _sum;
-                _winner = _i;
+            if sum > winner_sum {
+                winner_sum = sum;
+                winner = i;
             }
-            _i +=1;
-            _sum =0;
+            i +=1;
+            sum =0;
             continue;
         }
         let value:u128 = line.parse().unwrap();
-        _sum += value;
+        sum += value;
 
     }
-    println!("Problem 1 - Elf {} with sum {}", _winner, _winner_sum);
+    println!("Problem 1 - Elf {} with sum {}", winner, winner_sum);
 }
 
 pub fn second_problem() {
 
     let  lines: Vec<_>  = get_input().split("\n").collect();
-    let mut _i:u128=1;
-    let mut _sum:u128=0;
-    let mut _top:u128 =0;
-    let mut _second:u128 =0;
-    let mut _third:u128 =0;
+    let mut sum:u128=0;
+    let mut top:u128 =0;
+    let mut second:u128 =0;
+    let mut third:u128 =0;
     for line in lines  {
         if is_empty_line(line) {
-            if _sum > _third {
-                if _top < _sum {
-                    _third = _second;
-                    _second = _top;
-                    _top = _sum;
+            if sum > third {
+                if top < sum {
+                    third = second;
+                    second = top;
+                    top = sum;
 
-                }else if _second < _sum {
-                    _third = _second;
-                    _second = _sum;
+                }else if second < sum {
+                    third = second;
+                    second = sum;
                 } else {
-                    _third = _sum;
+                    third = sum;
                 }
             }
-            _i +=1;
-            _sum =0;
+            sum =0;
             continue;
         }
         let value:u128 = line.parse().unwrap();
-        _sum += value;
+        sum += value;
         //println!("{}-{}-{}", line, sum, i);
 
     }
-    println!("Sum of top 3 Elfs {}", _top + _second + _third);
+    println!("Sum of top 3 Elfs {}", top + second + third);
 }
 
 fn is_empty_line(input:&str) -> bool{

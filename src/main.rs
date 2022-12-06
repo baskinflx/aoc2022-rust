@@ -3,6 +3,7 @@ mod aoc_day_02;
 mod aoc_day_03;
 mod aoc_day_04;
 mod aoc_day_05;
+mod aoc_day_06;
 
 
 fn main() {
@@ -37,12 +38,21 @@ fn main() {
     aoc_day_04::second_problem();
     println!("-----------------------------");
 
-    println!("--------------Day 04---------------");
+    println!("--------------Day 05---------------");
 
     println!("--------------1---------------");
     aoc_day_05::first_problem();
     println!("---------------2--------------");
     aoc_day_05::second_problem();
     println!("-----------------------------");
+
+    println!("--------------Day 06---------------");
+
+    println!("--------------1---------------");
+    aoc_day_06::first_problem();
+    println!("---------------2--------------");
+    aoc_day_06::second_problem();
+    println!("-----------------------------");
+
 
 }

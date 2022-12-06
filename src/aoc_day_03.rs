@@ -4,9 +4,6 @@ pub fn first_problem(){
 
     for line in lines  {
         let input = line;
-        if input.trim().len() == 0 {
-            continue;
-        }
 
         let split_line = line.split_at(input.len()/2);
         let matching_char = find_first_matching_char(split_line.0, split_line.1);
@@ -23,11 +20,6 @@ pub fn second_problem() {
 
     let mut cnt =0;
     for line in lines {
-        let input = line;
-        if input.trim().len() == 0 {
-            continue;
-        }
-
         if cnt==0 {
             triple.0 = line;
         }else if cnt==1 {

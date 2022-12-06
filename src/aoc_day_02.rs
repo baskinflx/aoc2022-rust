@@ -5,9 +5,7 @@ pub fn first_problem() {
     let mut total: u128 = 0;
 
     for line in lines {
-        if is_empty_line(line) {
-            continue;
-        }
+
         let mut chars = get_chars(line);
 
         let opp = chars.next().unwrap();
@@ -24,9 +22,7 @@ pub fn second_problem() {
     let mut total: u128 = 0;
 
     for line in lines {
-        if is_empty_line(line) {
-            continue;
-        }
+
         let mut chars = get_chars(line);
         let opp: Option<char> = chars.next();
         chars.next();
@@ -93,11 +89,6 @@ fn win_value(opp: char, me: char) -> u128 {
         return 6;
     }
     return 0;
-}
-
-
-fn is_empty_line(input: &str) -> bool {
-    return input.trim().len() == 0;
 }
 
 fn get_input() -> &'static str {

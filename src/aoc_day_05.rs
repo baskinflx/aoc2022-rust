@@ -3,9 +3,7 @@ pub fn first_problem() {
 
     let mut stack = get_stack();
     for line in lines {
-        if line.trim().len() == 0 {
-            continue;
-        }
+
         let instructions = get_move_input(line);
         for _i in 0..instructions[0] {
             let c = stack[instructions[1] as usize].pop().unwrap();
@@ -29,9 +27,7 @@ pub fn second_problem() {
 
     let mut stack = get_stack();
     for line in lines {
-        if line.trim().len() == 0 {
-            continue;
-        }
+
         let instructions = get_move_input(line);
         let mut temp_stack: Vec<char> = Vec::new();
         for _i in 0..instructions[0] {
